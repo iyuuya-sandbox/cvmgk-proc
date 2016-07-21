@@ -105,8 +105,8 @@ cv::Mat composite(cv::Mat fg, cv::Mat bg, float scale, int x, int y, float alpha
 }
 
 int main() {
-  auto base = cv::imread("out_000001.png", cv::IMREAD_UNCHANGED);
-  auto avatar = cv::imread("avatar_a.png", cv::IMREAD_UNCHANGED);
+  auto base = cv::imread("/Users/iyuuya/Downloads/out_000241.png", cv::IMREAD_UNCHANGED);
+  auto avatar = cv::imread("/Users/iyuuya/Downloads/5FMsOn3HC-g8WKx7dXVN0A.png", cv::IMREAD_UNCHANGED);
 
   auto output = composite(avatar, base, 0.5, 0, 0, 1.0);
   output = composite(avatar, output, 0.25, 768, 0, 1.0);
