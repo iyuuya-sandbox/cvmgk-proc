@@ -142,7 +142,9 @@ cv::Mat composite(cv::Mat fg, cv::Mat bg, float scale, int x, int y, float alpha
 
 int main() {
   auto base = cv::imread("out_000001.png", cv::IMREAD_UNCHANGED);
-  auto text = cv::imread("naoki_s.png", cv::IMREAD_UNCHANGED);
+  auto text = cv::imread("naoki_s.png");
+
+  std::cout << text.channels();
 
   auto output = composite(text, base, 1.0, 0, 0, 1.0);
 
@@ -150,7 +152,6 @@ int main() {
 
   return 0;
 }
-
 
 /* ========================================================================== */
 /*      EOF                                                                   */
