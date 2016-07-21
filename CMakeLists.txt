@@ -142,3 +142,15 @@ set_target_properties(cv_test03
   CXX_STANDARD 11
   CXX_STANDARD_REQUIRED ON
 )
+
+add_executable(cv_test04 cv_test04.cc)
+target_link_libraries(cv_test04 opencv_core opencv_imgproc opencv_highgui Threads::Threads ${ImageMagick_LIBRARIES})
+
+set_target_properties(cv_test04
+  PROPERTIES
+  ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+  LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+  RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+  CXX_STANDARD 11
+  CXX_STANDARD_REQUIRED ON
+)
